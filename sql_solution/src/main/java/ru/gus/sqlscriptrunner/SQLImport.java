@@ -1,4 +1,4 @@
-package sqlscriptrunner;
+package ru.gus.sqlscriptrunner;
 
 import java.io.File;
 import java.io.FileInputStream;

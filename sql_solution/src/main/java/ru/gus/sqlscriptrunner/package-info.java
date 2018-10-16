@@ -6,4 +6,4 @@
  * @since 0.1
  * 16.10.2018
  */
-package sqlscriptrunner;
+package ru.gus.sqlscriptrunner;
