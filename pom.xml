@@ -1,9 +1,9 @@
 <project>
     <modelVersion>4.0.0</modelVersion>
-    <groupId>b.roman</groupId>
+    <groupId>ru.b_roman</groupId>
     <artifactId>SolCollection</artifactId>
     <packaging>pom</packaging>
-    <version>2.0</version>
+    <version>1.0</version>
      <name>SolCollection</name>
 
     <properties>
