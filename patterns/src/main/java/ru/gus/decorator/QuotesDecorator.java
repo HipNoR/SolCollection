@@ -4,21 +4,20 @@ package ru.gus.decorator;
  * Класс декоратор - оборачивает сообщение в кавычки.
  *
  * @author Roman Bednyashov (hipnorosva@gmail.com)
- * @version 0.1$
+ * @version 0.2$
  * @since 0.1
  * 16.10.2018
  */
-public class QuotesDecorator implements PrinterInterface {
-    PrinterInterface component;
+public class QuotesDecorator extends Decorator {
 
     public QuotesDecorator(PrinterInterface component) {
-        this.component = component;
+      super(component);
     }
 
     @Override
     public void print() {
         System.out.print("\"");
-        component.print();
+        super.print();
         System.out.print("\"");
     }
 }
