@@ -20,15 +20,15 @@ public class DispatchDiapason {
      * @return current object.
      */
     public DispatchDiapason init() {
-        this.dispatch.put(
+        load(
                 person -> person.age() < 14,
                 person -> Person.Access.FORBIDDEN
         );
-        this.dispatch.put(
+        load(
                 person -> person.age() >= 14 && person.age() < 18,
                 person -> Person.Access.LIMIT
         );
-        this.dispatch.put(
+        load(
                 person -> person.age() >= 18,
                 person -> Person.Access.FREE
         );
