@@ -3,6 +3,7 @@ package ru.gus.singleton;
 /**
  * Simple threadsafe Singleton.
  * Only one instance of class is exists.
+ *  Double Checked Locking & volatile.
  *
  * @author Roman Bednyashov (hipnorosva@gmail.com)
  * @version 0.1$
