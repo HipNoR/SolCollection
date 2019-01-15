@@ -1,10 +1,10 @@
 <project>
-    <modelVersion>4.0.0</modelVersion>
-    <groupId>ru.b_roman</groupId>
-    <artifactId>SolCollection</artifactId>
-    <packaging>pom</packaging>
-    <version>1.0</version>
-     <name>SolCollection</name>
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>ru.b_roman</groupId>
+	<artifactId>SolCollection</artifactId>
+	<packaging>pom</packaging>
+	<version>1.0</version>
+	<name>SolCollection</name>
 
 	<properties>
 		<maven.compiler.source>11</maven.compiler.source>
@@ -13,11 +13,12 @@
 		<argLine>-Dfile.encoding=UTF-8</argLine>
 	</properties>
 
-    <modules>
-        <module>sql_solution</module>
+	<modules>
+		<module>sql_solution</module>
 		<module>patterns</module>
-    </modules>
-	
+		<module>algorithms</module>
+	</modules>
+
 	<dependencies>
 		<dependency>
 			<groupId>org.hamcrest</groupId>
@@ -58,15 +59,15 @@
 			<version>2.11.1</version>
 		</dependency>
 	</dependencies>
-	
+
 	<build>
-       <plugins>
+		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-javadoc-plugin</artifactId>
 				<version>3.0.1</version>
 			</plugin>
-        	<plugin>
+			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-checkstyle-plugin</artifactId>
 				<version>3.0.0</version>
@@ -87,26 +88,45 @@
 					</execution>
 				</executions>
 			</plugin>
-		   <plugin>
-			   <groupId>org.jacoco</groupId>
-			   <artifactId>jacoco-maven-plugin</artifactId>
-			   <version>0.8.2</version>
-			   <executions>
-				   <execution>
-					   <goals>
-						   <goal>prepare-agent</goal>
-					   </goals>
-				   </execution>
-				   <execution>
-					   <id>report</id>
-					   <phase>test</phase>
-					   <goals>
-						   <goal>report</goal>
-					   </goals>
-				   </execution>
-			   </executions>
-		   </plugin>
+			<plugin>
+				<groupId>org.jacoco</groupId>
+				<artifactId>jacoco-maven-plugin</artifactId>
+				<version>0.8.2</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>prepare-agent</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>report</id>
+						<phase>test</phase>
+						<goals>
+							<goal>report</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.22.1</version>
+				<configuration>
+					<forkCount>1</forkCount>
+					<reuseForks>true</reuseForks>
+				</configuration>
+				<executions>
+					<execution>
+						<id>default-test</id>
+						<phase>test</phase>
+						<goals>
+							<goal>test</goal>
+						</goals>
+					</execution>
+				</executions>
+
+			</plugin>
 		</plugins>
-    </build> 
-	 
+	</build>
+
 </project>
