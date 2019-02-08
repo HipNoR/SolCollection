@@ -17,6 +17,7 @@
 		<module>sql_solution</module>
 		<module>patterns</module>
 		<module>algorithms</module>
+		<module>test_poligon</module>
 	</modules>
 
 	<dependencies>
