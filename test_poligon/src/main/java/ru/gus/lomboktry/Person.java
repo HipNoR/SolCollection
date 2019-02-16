@@ -1,9 +1,7 @@
 package ru.gus.lomboktry;
 
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 /**
  * Класс использует библиотеку lombok.
@@ -17,6 +15,7 @@ import lombok.NoArgsConstructor;
  * 08.02.2019
  */
 @Data
+@Builder
 @NoArgsConstructor
 @AllArgsConstructor
 public class Person {
@@ -24,4 +23,5 @@ public class Person {
     private String sname;
     private int age;
     private String hobby;
+    @ToString.Exclude private int id;
 }
